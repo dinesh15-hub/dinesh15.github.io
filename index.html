@@ -1,65 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Your Name - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
-
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>Your Name</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="about">
+    <section id="hero">
         <div class="container">
-            <h1>About Me</h1>
-            <p>Hello, I'm <strong>Dinesh Chandra Reddy</strong>, a passionate developer and tech enthusiast. I specialize in creating clean, functional, and responsive web applications. Welcome to my personal website where you can explore my work, skills, and get in touch with me.</p>
+            <h2>Welcome to My Personal Website!</h2>
+            <p>I am a passionate developer and tech enthusiast.</p>
+            <a href="#projects" class="btn">See My Projects</a>
         </div>
     </section>
 
-    <section id="projects">
+    <section id="about" class="section">
         <div class="container">
-            <h1>Projects</h1>
-            <div class="project">
-                <h2>Project 1</h2>
-                <p>Description of your first project goes here. You can explain what technology you used, what challenges you faced, and what you learned.</p>
-                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-            </div>
-
-            <div class="project">
-                <h2>Project 2</h2>
-                <p>Description of your second project goes here. Include any interesting details or highlights.</p>
-                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-            </div>
-            <!-- Add more projects as needed -->
+            <h2>About Me</h2>
+            <pHi, I'm Dinesh Chandra Reddy , a passionate and motivated Computer Science enthusiast with a deep interest in technology, software development, and problem-solving. Currently, I am pursuing a Bachelor's in Computer Science and Engineering at Anurag University, where I’m constantly expanding my skills in coding, data structures, and algorithms.</p>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="projects" class="section">
         <div class="container">
-            <h1>Contact Me</h1>
-            <p>If you'd like to get in touch, feel free to reach out to me via email or through the contact form below.</p>
-            <ul>
-                <li>Email: your.email@example.com</li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Your LinkedIn</a></li>
-                <li>GitHub: <a href="https://github.com/yourusername" target="_blank">Your GitHub</a></li>
-            </ul>
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Short description of the project and its features.</p>
+                    <a href="https://github.com/yourusername/project1" target="_blank" class="btn">View on GitHub</a>
+                </div>
+                <div class="project">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Short description of the project and its features.</p>
+                    <a href="https://github.com/yourusername/project2" target="_blank" class="btn">View on GitHub</a>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p>If you would like to get in touch, feel free to reach out to me.</p>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
         </div>
     </section>
 
     <footer>
-        <p>© 2025 Your Name | All Rights Reserved</p>
+        <div class="container">
+            <p>&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
     </footer>
 </body>
-
 </html>
