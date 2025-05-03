@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Personal Website</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Header Section -->
-  <header>
-    <div class="navbar">
-      <h1>My Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <section id="about">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Hello, I'm <strong>Your Name</strong>, a passionate developer and tech enthusiast. I specialize in creating clean, functional, and responsive web applications. Welcome to my personal website where you can explore my work, skills, and get in touch with me.</p>
+        </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Welcome to My Personal Website</h2>
-    <p>I’m a passionate web developer. Here are some of my projects!</p>
-    <button onclick="scrollToProjects()">See My Projects</button>
-  </section>
+    <section id="projects">
+        <div class="container">
+            <h1>Projects</h1>
+            <div class="project">
+                <h2>Project 1</h2>
+                <p>Description of your first project goes here. You can explain what technology you used, what challenges you faced, and what you learned.</p>
+                <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
+            </div>
 
-  <!-- Projects Section -->
-  <section id="projects" class="projects">
-    <h2>My Projects</h2>
-    <div class="project">
-      <img src="assets/project-image.jpg" alt="Project 1">
-      <h3>Project 1</h3>
-      <p>This is a brief description of project 1. It shows how awesome I am at coding!</p>
-      <a href="https://github.com/your-username/project1" target="_blank">View on GitHub</a>
-    </div>
+            <div class="project">
+                <h2>Project 2</h2>
+                <p>Description of your second project goes here. Include any interesting details or highlights.</p>
+                <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
 
-    <!-- Add more project divs as needed -->
-  </section>
+    <section id="contact">
+        <div class="container">
+            <h1>Contact Me</h1>
+            <p>If you'd like to get in touch, feel free to reach out to me via email or through the contact form below.</p>
+            <ul>
+                <li>Email: your.email@example.com</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Your LinkedIn</a></li>
+                <li>GitHub: <a href="https://github.com/yourusername" target="_blank">Your GitHub</a></li>
+            </ul>
+        </div>
+    </section>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>Created by Your Name. Check out my <a href="https://github.com/your-username" target="_blank">GitHub</a></p>
-  </footer>
-
-  <script src="js/script.js"></script>
+    <footer>
+        <p>© 2025 Your Name | All Rights Reserved</p>
+    </footer>
 </body>
+
 </html>

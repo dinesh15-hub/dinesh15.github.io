@@ -1,8 +1,9 @@
-// Function to scroll to the projects section when the button is clicked
-function scrollToProjects() {
-  const projectsSection = document.getElementById('projects');
-  window.scrollTo({
-    top: projectsSection.offsetTop,
-    behavior: 'smooth'
+// Smooth scroll functionality for navigation links
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
   });
-}
+});
