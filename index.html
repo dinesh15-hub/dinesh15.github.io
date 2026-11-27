@@ -31,14 +31,9 @@
   --radius-lg: 26px;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 92px;
-}
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 
 body {
   margin: 0;
@@ -52,1057 +47,252 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; cursor: pointer; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 
-button {
-  font: inherit;
-  color: inherit;
-  cursor: pointer;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--green);
-  outline-offset: 3px;
-}
-
-.wrap {
-  width: min(1140px, calc(100% - 48px));
-  margin: 0 auto;
-}
+.wrap { width: min(1140px, calc(100% - 48px)); margin: 0 auto; }
 
 /* Header & Nav */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 40;
+  position: sticky; top: 0; z-index: 40;
   background: rgba(247, 248, 244, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(223, 230, 220, 0.9);
 }
-
-.nav {
-  min-height: 76px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.brand {
-  font: 800 18px/1 "Manrope", sans-serif;
-  letter-spacing: -0.03em;
-  display: inline-flex;
-  align-items: center;
-  gap: 2px;
-}
-
-.brand span {
-  color: var(--green);
-}
-
-.navlinks {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-}
-
-.navlinks a {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--muted);
-  transition: color 0.2s ease;
-}
-
-.navlinks a:hover,
-.navlinks a.active {
-  color: var(--green);
-}
-
+.nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { font: 800 18px/1 "Manrope", sans-serif; letter-spacing: -0.03em; display: inline-flex; align-items: center; gap: 2px; }
+.brand span { color: var(--green); }
+.navlinks { display: flex; align-items: center; gap: 26px; }
+.navlinks a { font-size: 13.5px; font-weight: 600; color: var(--muted); transition: color 0.2s ease; }
+.navlinks a:hover, .navlinks a.active { color: var(--green); }
 .nav-cta {
-  padding: 9px 16px !important;
-  border: 1px solid var(--line-strong);
-  border-radius: 999px;
-  color: var(--ink) !important;
-  background: var(--white);
-  box-shadow: var(--shadow-sm);
+  padding: 9px 16px !important; border: 1px solid var(--line-strong); border-radius: 999px;
+  color: var(--ink) !important; background: var(--white); box-shadow: var(--shadow-sm);
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease !important;
 }
-
-.nav-cta:hover {
-  border-color: var(--green);
-  transform: translateY(-1px);
-}
+.nav-cta:hover { border-color: var(--green); transform: translateY(-1px); }
 
 .menu-toggle {
-  display: none;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: var(--white);
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
+  display: none; width: 42px; height: 42px; border-radius: 12px;
+  border: 1px solid var(--line); background: var(--white);
+  align-items: center; justify-content: center; flex-direction: column; gap: 5px;
 }
-
-.menu-toggle span {
-  width: 18px;
-  height: 2px;
-  background: var(--ink);
-  border-radius: 2px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
+.menu-toggle span { width: 18px; height: 2px; background: var(--ink); border-radius: 2px; }
 
 /* Hero */
-.hero {
-  padding: 72px 0 64px;
-  display: grid;
-  grid-template-columns: 1.32fr 0.86fr;
-  gap: 56px;
-  align-items: center;
-}
-
+.hero { padding: 72px 0 64px; display: grid; grid-template-columns: 1.32fr 0.86fr; gap: 56px; align-items: center; }
 .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 12px 6px 8px;
-  border-radius: 999px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  color: var(--green);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  box-shadow: var(--shadow-sm);
+  display: inline-flex; align-items: center; gap: 10px; padding: 6px 12px 6px 8px; border-radius: 999px;
+  background: var(--white); border: 1px solid var(--line); color: var(--green);
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; box-shadow: var(--shadow-sm);
 }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #4ca368; box-shadow: 0 0 0 4px rgba(76, 163, 104, 0.2); }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #4ca368;
-  box-shadow: 0 0 0 4px rgba(76, 163, 104, 0.2);
-}
-
-h1, h2, h3, h4, p {
-  margin-top: 0;
-}
-
-h1 {
-  font: 800 clamp(44px, 6.2vw, 74px)/1.04 "Manrope", sans-serif;
-  letter-spacing: -0.04em;
-  margin: 22px 0 20px;
-  max-width: 680px;
-}
-
-h1 em {
-  font-style: normal;
-  color: var(--green);
-  position: relative;
-}
-
-.intro {
-  font-size: 17px;
-  color: var(--muted);
-  max-width: 610px;
-  line-height: 1.75;
-  margin-bottom: 28px;
-}
-
-.actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+h1, h2, h3, h4, p { margin-top: 0; }
+h1 { font: 800 clamp(44px, 6.2vw, 74px)/1.04 "Manrope", sans-serif; letter-spacing: -0.04em; margin: 22px 0 20px; max-width: 680px; }
+h1 em { font-style: normal; color: var(--green); }
+.intro { font-size: 17px; color: var(--muted); max-width: 610px; line-height: 1.75; margin-bottom: 28px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 20px;
-  border-radius: 999px;
-  font-size: 13.5px;
-  font-weight: 700;
-  border: 1px solid transparent;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 20px; border-radius: 999px; font-size: 13.5px; font-weight: 700; border: 1px solid transparent;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn.primary {
-  background: var(--green);
-  color: var(--white);
-  box-shadow: 0 10px 24px rgba(22, 104, 80, 0.22);
-}
-
-.btn.primary:hover {
-  background: var(--green-hover);
-}
-
-.btn.secondary {
-  background: var(--white);
-  color: var(--ink);
-  border-color: var(--line-strong);
-  box-shadow: var(--shadow-sm);
-}
-
-.btn.secondary:hover {
-  border-color: var(--green);
-}
-
-.btn.ghost {
-  background: rgba(255, 255, 255, 0.7);
-  color: var(--muted);
-  border-color: var(--line);
-}
-
-.btn.ghost:hover {
-  color: var(--ink);
-  border-color: var(--line-strong);
-}
+.btn:hover { transform: translateY(-2px); }
+.btn.primary { background: var(--green); color: var(--white); box-shadow: 0 10px 24px rgba(22, 104, 80, 0.22); }
+.btn.primary:hover { background: var(--green-hover); }
+.btn.secondary { background: var(--white); color: var(--ink); border-color: var(--line-strong); box-shadow: var(--shadow-sm); }
+.btn.secondary:hover { border-color: var(--green); }
+.btn.ghost { background: rgba(255, 255, 255, 0.7); color: var(--muted); border-color: var(--line); }
+.btn.ghost:hover { color: var(--ink); border-color: var(--line-strong); }
 
 .hero-note {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 36px;
-  padding-top: 22px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 12.5px;
-  max-width: 610px;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 36px; padding-top: 22px;
+  border-top: 1px solid var(--line); color: var(--muted); font-size: 12.5px; max-width: 610px;
 }
-
-.hero-note strong {
-  display: block;
-  color: var(--ink);
-  font: 700 14.5px/1.3 "Manrope", sans-serif;
-  margin-bottom: 2px;
-}
+.hero-note strong { display: block; color: var(--ink); font: 700 14.5px/1.3 "Manrope", sans-serif; margin-bottom: 2px; }
 
 /* Profile Card */
 .profile-card {
-  position: relative;
-  background: linear-gradient(165deg, var(--dark-2) 0%, var(--dark) 100%);
-  color: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  box-shadow: var(--shadow-lg);
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative; background: linear-gradient(165deg, var(--dark-2) 0%, var(--dark) 100%); color: var(--white);
+  border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-lg); overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08);
 }
-
 .profile-card::before {
-  content: "";
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(200, 224, 139, 0.22), transparent 70%);
-  right: -70px;
-  top: -80px;
-  pointer-events: none;
+  content: ""; position: absolute; width: 240px; height: 240px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 224, 139, 0.22), transparent 70%); right: -70px; top: -80px; pointer-events: none;
 }
-
-.card-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  position: relative;
-}
-
-.card-label {
-  font-size: 10.5px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #b7c9be;
-  font-weight: 700;
-}
-
+.card-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; position: relative; }
+.card-label { font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #b7c9be; font-weight: 700; }
 .availability {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--lime);
-  background: rgba(200, 224, 139, 0.12);
-  border: 1px solid rgba(200, 224, 139, 0.3);
-  padding: 5px 10px;
-  border-radius: 999px;
-  white-space: nowrap;
+  font-size: 11px; font-weight: 600; color: var(--lime); background: rgba(200, 224, 139, 0.12);
+  border: 1px solid rgba(200, 224, 139, 0.3); padding: 5px 10px; border-radius: 999px; white-space: nowrap;
 }
-
 .monogram {
-  width: 64px;
-  height: 64px;
-  display: grid;
-  place-items: center;
-  border-radius: 18px;
-  background: var(--lime);
-  color: var(--dark);
-  font: 800 24px/1 "Manrope", sans-serif;
-  letter-spacing: -0.03em;
-  margin: 34px 0 18px;
-  position: relative;
+  width: 64px; height: 64px; display: grid; place-items: center; border-radius: 18px; background: var(--lime); color: var(--dark);
+  font: 800 24px/1 "Manrope", sans-serif; letter-spacing: -0.03em; margin: 34px 0 18px; position: relative;
 }
-
-.profile-card h2 {
-  font: 700 24px/1.2 "Manrope", sans-serif;
-  letter-spacing: -0.03em;
-  margin-bottom: 8px;
-  position: relative;
-}
-
-.profile-card p {
-  color: #c2d0c7;
-  font-size: 13.5px;
-  line-height: 1.65;
-  margin-bottom: 24px;
-  position: relative;
-}
-
-.card-rule {
-  height: 1px;
-  background: rgba(255, 255, 255, 0.14);
-  margin-bottom: 18px;
-}
-
-.stat-row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  position: relative;
-}
-
-.stat {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 12px 10px;
-  text-align: center;
-}
-
-.stat strong {
-  display: block;
-  color: var(--white);
-  font: 800 21px/1.15 "Manrope", sans-serif;
-}
-
-.stat span {
-  display: block;
-  color: #b7c7bd;
-  font-size: 11px;
-  margin-top: 3px;
-}
+.profile-card h2 { font: 700 24px/1.2 "Manrope", sans-serif; letter-spacing: -0.03em; margin-bottom: 8px; position: relative; }
+.profile-card p { color: #c2d0c7; font-size: 13.5px; line-height: 1.65; margin-bottom: 24px; position: relative; }
+.card-rule { height: 1px; background: rgba(255, 255, 255, 0.14); margin-bottom: 18px; }
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; position: relative; }
+.stat { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 12px 10px; text-align: center; }
+.stat strong { display: block; color: var(--white); font: 800 21px/1.15 "Manrope", sans-serif; }
+.stat span { display: block; color: #b7c7bd; font-size: 11px; margin-top: 3px; }
 
 /* Sections */
-.section {
-  padding: 76px 0;
-  border-top: 1px solid var(--line);
-}
-
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 24px;
-  margin-bottom: 32px;
-}
-
-.section-kicker {
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--green);
-  font-weight: 800;
-  margin-bottom: 8px;
-}
-
-.section-title {
-  font: 800 clamp(28px, 3.8vw, 42px)/1.12 "Manrope", sans-serif;
-  letter-spacing: -0.035em;
-  margin: 0;
-}
-
-.section-desc {
-  max-width: 390px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.65;
-  margin: 0;
-}
+.section { padding: 76px 0; border-top: 1px solid var(--line); }
+.section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 32px; }
+.section-kicker { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--green); font-weight: 800; margin-bottom: 8px; }
+.section-title { font: 800 clamp(28px, 3.8vw, 42px)/1.12 "Manrope", sans-serif; letter-spacing: -0.035em; margin: 0; }
+.section-desc { max-width: 390px; color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0; }
 
 /* About */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.35fr 0.85fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.about-copy {
-  font-size: 16px;
-  color: #3d4d44;
-  line-height: 1.8;
-}
-
-.about-copy p:last-child {
-  margin-bottom: 0;
-}
-
-.about-aside {
-  background: var(--paper-2);
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-md);
-  padding: 24px;
-}
-
-.about-aside strong {
-  font: 700 16px/1.3 "Manrope", sans-serif;
-  display: block;
-  margin-bottom: 14px;
-}
-
-.pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.pill {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 7px 13px;
-  font-size: 12px;
-  color: #33443a;
-  font-weight: 600;
-}
+.about-grid { display: grid; grid-template-columns: 1.35fr 0.85fr; gap: 40px; align-items: start; }
+.about-copy { font-size: 16px; color: #3d4d44; line-height: 1.8; }
+.about-copy p:last-child { margin-bottom: 0; }
+.about-aside { background: var(--paper-2); border: 1px solid var(--line-strong); border-radius: var(--radius-md); padding: 24px; }
+.about-aside strong { font: 700 16px/1.3 "Manrope", sans-serif; display: block; margin-bottom: 14px; }
+.pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.pill { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 7px 13px; font-size: 12px; color: #33443a; font-weight: 600; }
 
 /* Skills */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.skill {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: 22px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.skill:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--line-strong);
-}
-
-.skill-index {
-  font-size: 10.5px;
-  color: var(--green);
-  font-weight: 800;
-  letter-spacing: 0.12em;
-}
-
-.skill h3 {
-  font: 700 17px/1.3 "Manrope", sans-serif;
-  letter-spacing: -0.02em;
-  margin: 10px 0 6px;
-}
-
-.skill p {
-  font-size: 13px;
-  color: var(--muted);
-  margin: 0;
-  line-height: 1.65;
-}
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.skill { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 22px; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.skill:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+.skill-index { font-size: 10.5px; color: var(--green); font-weight: 800; letter-spacing: 0.12em; }
+.skill h3 { font: 700 17px/1.3 "Manrope", sans-serif; letter-spacing: -0.02em; margin: 10px 0 6px; }
+.skill p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.65; }
 
 /* Education & Experience */
-.edu-card,
-.exp-item {
-  display: grid;
-  grid-template-columns: 175px 1fr;
-  gap: 28px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: 26px;
-  box-shadow: var(--shadow-sm);
+.edu-card, .exp-item {
+  display: grid; grid-template-columns: 175px 1fr; gap: 28px; background: var(--white);
+  border: 1px solid var(--line); border-radius: var(--radius-md); padding: 26px; box-shadow: var(--shadow-sm);
 }
+.date { font-size: 12.5px; font-weight: 700; color: var(--green); }
+.date span { display: block; color: var(--muted); font-weight: 500; margin-top: 4px; }
+.edu-card h3, .exp-item h3 { font: 700 20px/1.25 "Manrope", sans-serif; letter-spacing: -0.02em; margin: 0 0 6px; }
+.org { font-weight: 700; font-size: 13.5px; color: #3c4d43; margin-bottom: 12px; }
+.edu-card p, .exp-item p { font-size: 13.5px; color: var(--muted); line-height: 1.7; margin-bottom: 0; }
+.facts { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px; }
+.fact { padding: 11px 16px; border-radius: var(--radius-sm); background: var(--paper); border: 1px solid var(--line); min-width: 110px; }
+.fact b { font: 800 19px/1.2 "Manrope", sans-serif; display: block; color: var(--ink); }
+.fact span { font-size: 11px; color: var(--muted); }
 
-.date {
-  font-size: 12.5px;
-  font-weight: 700;
-  color: var(--green);
+.experience { display: grid; gap: 16px; }
+.exp-item h4 { font: 700 13px/1.3 "Manrope", sans-serif; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink); margin: 20px 0 6px; }
+.exp-item ul { padding-left: 18px; margin: 8px 0 0; color: #415248; font-size: 13.5px; line-height: 1.65; }
+.exp-item li { padding: 3px 0; }
+.exp-item li a { color: var(--green); font-weight: 700; }
+.exp-item li a:hover { text-decoration: underline; }
+.exp-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+.exp-links a {
+  font-size: 12.5px; font-weight: 700; color: var(--green); background: var(--green-soft);
+  border: 1px solid rgba(22, 104, 80, 0.18); padding: 7px 13px; border-radius: 999px; transition: background 0.18s ease;
 }
-
-.date span {
-  display: block;
-  color: var(--muted);
-  font-weight: 500;
-  margin-top: 4px;
-}
-
-.edu-card h3,
-.exp-item h3 {
-  font: 700 20px/1.25 "Manrope", sans-serif;
-  letter-spacing: -0.02em;
-  margin: 0 0 6px;
-}
-
-.org {
-  font-weight: 700;
-  font-size: 13.5px;
-  color: #3c4d43;
-  margin-bottom: 12px;
-}
-
-.edu-card p,
-.exp-item p {
-  font-size: 13.5px;
-  color: var(--muted);
-  line-height: 1.7;
-  margin-bottom: 0;
-}
-
-.facts {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 18px;
-}
-
-.fact {
-  padding: 11px 16px;
-  border-radius: var(--radius-sm);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  min-width: 110px;
-}
-
-.fact b {
-  font: 800 19px/1.2 "Manrope", sans-serif;
-  display: block;
-  color: var(--ink);
-}
-
-.fact span {
-  font-size: 11px;
-  color: var(--muted);
-}
-
-.experience {
-  display: grid;
-  gap: 16px;
-}
-
-.exp-item ul {
-  padding-left: 18px;
-  margin: 14px 0 0;
-  color: #415248;
-  font-size: 13px;
-}
-
-.exp-item li {
-  padding: 4px 0;
-}
-
-.exp-item li a {
-  color: var(--green);
-  font-weight: 700;
-}
-
-.exp-item li a:hover {
-  text-decoration: underline;
-}
+.exp-links a:hover { background: #d3e8dc; }
+.exp-links a.live { background: var(--green); color: var(--white); border-color: var(--green); }
+.exp-links a.live:hover { background: var(--green-hover); }
 
 /* Projects & Filter */
-.filter-bar {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-bottom: 22px;
-}
+.filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; }
+.filter-btn { padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--white); font-size: 12.5px; font-weight: 600; color: var(--muted); transition: all 0.18s ease; }
+.filter-btn:hover { border-color: var(--line-strong); color: var(--ink); }
+.filter-btn[aria-pressed="true"] { background: var(--green); border-color: var(--green); color: var(--white); }
 
-.filter-btn {
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  background: var(--white);
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--muted);
-  transition: all 0.18s ease;
-}
-
-.filter-btn:hover {
-  border-color: var(--line-strong);
-  color: var(--ink);
-}
-
-.filter-btn[aria-pressed="true"] {
-  background: var(--green);
-  border-color: var(--green);
-  color: var(--white);
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.project {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-}
-
-.project.is-hidden {
-  display: none;
-}
-
-.project:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--line-strong);
-}
-
-.project-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 18px;
-}
-
-.project-no {
-  font: 800 12px/1 "Manrope", sans-serif;
-  color: #8b9e93;
-}
-
-.project-type {
-  font-size: 10px;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: var(--green);
-  background: var(--green-soft);
-  padding: 5px 10px;
-  border-radius: 999px;
-  font-weight: 800;
-}
-
-.project h3 {
-  font: 700 21px/1.25 "Manrope", sans-serif;
-  letter-spacing: -0.025em;
-  margin: 0 0 8px;
-}
-
-.project p {
-  font-size: 13.5px;
-  color: var(--muted);
-  line-height: 1.65;
-  margin-bottom: 16px;
-}
-
-.project-metric {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  margin: 0 0 16px;
-  padding: 12px 0;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.metric b {
-  display: block;
-  font: 800 17px/1.2 "Manrope", sans-serif;
-  color: var(--ink);
-}
-
-.metric span {
-  display: block;
-  font-size: 11px;
-  color: var(--muted);
-}
-
-.tags {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.tags span {
-  background: var(--paper-2);
-  border: 1px solid rgba(223, 230, 220, 0.8);
-  border-radius: 999px;
-  padding: 4px 10px;
-  font-size: 11px;
-  font-weight: 500;
-  color: #415248;
-}
-
-.project-footer {
-  margin-top: auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding-top: 4px;
-}
-
-.project-link {
-  color: var(--green);
-  font-size: 12.5px;
-  font-weight: 700;
-}
-
-.project-link:hover {
-  text-decoration: underline;
-}
-
-.detail-btn {
-  border: 1px solid var(--line);
-  background: var(--paper);
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--ink);
-  transition: background 0.18s ease, border-color 0.18s ease;
-}
-
-.detail-btn:hover {
-  background: var(--paper-2);
-  border-color: var(--line-strong);
-}
-
-/* Certifications */
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-.cert {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-sm);
-  padding: 18px 20px;
-  font-size: 14px;
-  font-weight: 700;
-  box-shadow: var(--shadow-sm);
-}
-
-.cert small {
-  display: block;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 500;
-  margin-top: 4px;
-}
+.project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.project { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius-md); padding: 24px; display: flex; flex-direction: column; transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease; }
+.project.is-hidden { display: none; }
+.project:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+.project-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
+.project-no { font: 800 12px/1 "Manrope", sans-serif; color: #8b9e93; }
+.project-type { font-size: 10px; letter-spacing: 0.11em; text-transform: uppercase; color: var(--green); background: var(--green-soft); padding: 5px 10px; border-radius: 999px; font-weight: 800; }
+.project h3 { font: 700 21px/1.25 "Manrope", sans-serif; letter-spacing: -0.025em; margin: 0 0 8px; }
+.project h3 a:hover { color: var(--green); }
+.project p { font-size: 13.5px; color: var(--muted); line-height: 1.65; margin-bottom: 16px; }
+.project-metric { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 0 0 16px; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.metric b { display: block; font: 800 17px/1.2 "Manrope", sans-serif; color: var(--ink); }
+.metric span { display: block; font-size: 11px; color: var(--muted); }
+.tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px; }
+.tags span { background: var(--paper-2); border: 1px solid rgba(223, 230, 220, 0.8); border-radius: 999px; padding: 4px 10px; font-size: 11px; font-weight: 500; color: #415248; }
+.project-footer { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 4px; flex-wrap: wrap; }
+.plinks { display: flex; gap: 8px; flex-wrap: wrap; }
+.project-link { color: var(--green); font-size: 12.5px; font-weight: 700; padding: 7px 13px; border-radius: 999px; background: var(--green-soft); border: 1px solid rgba(22, 104, 80, 0.18); transition: background 0.18s ease; }
+.project-link:hover { background: #d3e8dc; }
+.project-link.live { background: var(--green); color: var(--white); border-color: var(--green); }
+.project-link.live:hover { background: var(--green-hover); }
+.detail-btn { border: 1px solid var(--line); background: var(--paper); padding: 6px 12px; border-radius: 999px; font-size: 12px; font-weight: 600; color: var(--ink); transition: background 0.18s ease, border-color 0.18s ease; }
+.detail-btn:hover { background: var(--paper-2); border-color: var(--line-strong); }
 
 /* Contact */
 .contact-panel {
-  background: linear-gradient(155deg, var(--dark-2) 0%, var(--dark) 100%);
-  color: var(--white);
-  border-radius: var(--radius-lg);
-  padding: clamp(28px, 5vw, 48px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 28px;
-  box-shadow: var(--shadow-lg);
+  background: linear-gradient(155deg, var(--dark-2) 0%, var(--dark) 100%); color: var(--white); border-radius: var(--radius-lg);
+  padding: clamp(28px, 5vw, 48px); display: flex; justify-content: space-between; align-items: center; gap: 28px; box-shadow: var(--shadow-lg);
 }
-
-.contact-panel h2 {
-  font: 800 clamp(28px, 4vw, 42px)/1.12 "Manrope", sans-serif;
-  letter-spacing: -0.035em;
-  margin: 0 0 10px;
-}
-
-.contact-panel p {
-  color: #c2d0c7;
-  font-size: 14px;
-  line-height: 1.65;
-  margin: 0;
-  max-width: 470px;
-}
-
-.contact-actions {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  flex-shrink: 0;
-}
-
-.contact-actions .btn.light {
-  background: var(--lime);
-  color: var(--dark);
-  border-color: var(--lime);
-}
-
-.contact-actions .btn.outline {
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--white);
-  border-color: rgba(255, 255, 255, 0.28);
-}
-
-.contact-actions .btn.outline:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
+.contact-panel h2 { font: 800 clamp(28px, 4vw, 42px)/1.12 "Manrope", sans-serif; letter-spacing: -0.035em; margin: 0 0 10px; }
+.contact-panel p { color: #c2d0c7; font-size: 14px; line-height: 1.65; margin: 0; max-width: 470px; }
+.contact-actions { display: flex; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
+.contact-actions .btn.light { background: var(--lime); color: var(--dark); border-color: var(--lime); }
+.contact-actions .btn.outline { background: rgba(255, 255, 255, 0.04); color: var(--white); border-color: rgba(255, 255, 255, 0.28); }
+.contact-actions .btn.outline:hover { background: rgba(255, 255, 255, 0.12); }
 
 /* Footer */
-footer {
-  padding: 28px 0 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  color: var(--muted);
-  font-size: 12px;
-  border-top: 1px solid var(--line);
-}
-
-.footer-links {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.footer-links a:hover {
-  color: var(--green);
-}
+footer { padding: 28px 0 40px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); }
+.footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
+.footer-links a:hover { color: var(--green); }
 
 /* Modal */
-.modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 60;
-  background: rgba(14, 26, 21, 0.58);
-  backdrop-filter: blur(6px);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.modal-backdrop.open {
-  display: flex;
-}
-
-.modal {
-  width: min(580px, 100%);
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  padding: 28px;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--line);
-}
-
-.modal-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 14px;
-}
-
-.modal-head h3 {
-  font: 800 22px/1.25 "Manrope", sans-serif;
-  letter-spacing: -0.025em;
-  margin: 4px 0 0;
-}
-
-.modal-close {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: var(--paper);
-  font-size: 18px;
-  line-height: 1;
-}
-
-.modal-body {
-  font-size: 14px;
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.modal-bullets {
-  padding-left: 18px;
-  margin: 14px 0 18px;
-  color: var(--ink);
-  font-size: 13.5px;
-}
-
-.modal-bullets li {
-  margin-bottom: 6px;
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+.modal-backdrop { position: fixed; inset: 0; z-index: 60; background: rgba(14, 26, 21, 0.58); backdrop-filter: blur(6px); display: none; align-items: center; justify-content: center; padding: 20px; }
+.modal-backdrop.open { display: flex; }
+.modal { width: min(580px, 100%); background: var(--white); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-lg); border: 1px solid var(--line); max-height: 90vh; overflow: auto; }
+.modal-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 14px; }
+.modal-head h3 { font: 800 22px/1.25 "Manrope", sans-serif; letter-spacing: -0.025em; margin: 4px 0 0; }
+.modal-close { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line); background: var(--paper); font-size: 18px; line-height: 1; }
+.modal-body { font-size: 14px; color: var(--muted); line-height: 1.7; }
+.modal-bullets { padding-left: 18px; margin: 14px 0 18px; color: var(--ink); font-size: 13.5px; }
+.modal-bullets li { margin-bottom: 6px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
 
 /* Toast */
-.toast {
-  position: fixed;
-  bottom: 22px;
-  right: 22px;
-  z-index: 70;
-  background: var(--dark);
-  color: var(--white);
-  padding: 11px 16px;
-  border-radius: 999px;
-  font-size: 12.5px;
-  font-weight: 600;
-  box-shadow: var(--shadow-md);
-  opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.toast.show {
-  opacity: 1;
-  transform: translateY(0);
-}
+.toast { position: fixed; bottom: 22px; right: 22px; z-index: 70; background: var(--dark); color: var(--white); padding: 11px 16px; border-radius: 999px; font-size: 12.5px; font-weight: 600; box-shadow: var(--shadow-md); opacity: 0; transform: translateY(10px); pointer-events: none; transition: opacity 0.2s ease, transform 0.2s ease; }
+.toast.show { opacity: 1; transform: translateY(0); }
 
 /* Responsive */
 @media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    padding: 52px 0 48px;
-  }
-
-  .about-grid,
-  .skills-grid,
-  .cert-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .contact-panel {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  .hero { grid-template-columns: 1fr; gap: 36px; padding: 52px 0 48px; }
+  .about-grid, .skills-grid { grid-template-columns: 1fr 1fr; }
+  .contact-panel { flex-direction: column; align-items: flex-start; }
 }
-
 @media (max-width: 720px) {
-  .wrap {
-    width: calc(100% - 32px);
-  }
-
-  .menu-toggle {
-    display: inline-flex;
-  }
-
+  .wrap { width: calc(100% - 32px); }
+  .menu-toggle { display: inline-flex; }
   .navlinks {
-    position: absolute;
-    top: 76px;
-    left: 0;
-    right: 0;
-    background: var(--white);
-    border-bottom: 1px solid var(--line);
-    padding: 16px 24px 22px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-    box-shadow: var(--shadow-md);
-    display: none;
+    position: absolute; top: 76px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--line);
+    padding: 16px 24px 22px; flex-direction: column; align-items: flex-start; gap: 14px; box-shadow: var(--shadow-md); display: none;
   }
-
-  .navlinks.open {
-    display: flex;
-  }
-
-  .nav-cta {
-    width: 100%;
-    text-align: center;
-  }
-
-  .section {
-    padding: 56px 0;
-  }
-
-  .section-head {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .about-grid,
-  .skills-grid,
-  .project-grid,
-  .cert-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .edu-card,
-  .exp-item {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 20px;
-  }
-
-  .hero-note {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .contact-actions {
-    width: 100%;
-  }
-
-  .contact-actions .btn {
-    flex: 1;
-  }
+  .navlinks.open { display: flex; }
+  .nav-cta { width: 100%; text-align: center; }
+  .section { padding: 56px 0; }
+  .section-head { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .about-grid, .skills-grid, .project-grid { grid-template-columns: 1fr; }
+  .edu-card, .exp-item { grid-template-columns: 1fr; gap: 10px; padding: 20px; }
+  .hero-note { grid-template-columns: 1fr; gap: 12px; }
+  .contact-actions { width: 100%; }
+  .contact-actions .btn { flex: 1; }
 }
-
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *, *::before, *::after {
-    transition: none !important;
-    animation: none !important;
-  }
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#home">DINESH<span>.</span></a>
+    <a class="brand" href="#home">DINESH CHANDRA REDDY<span>.</span></a>
     <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
-      <span></span>
-      <span></span>
-      <span></span>
+      <span></span><span></span><span></span>
     </button>
     <nav class="navlinks" id="navLinks" aria-label="Main navigation">
       <a href="#about">About</a>
@@ -1110,7 +300,6 @@ footer {
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="#certifications">Highlights</a>
       <a class="nav-cta" href="#contact">Let's connect ↗</a>
     </nav>
   </div>
@@ -1140,7 +329,7 @@ footer {
           <span class="card-label">Profile Snapshot</span>
           <span class="availability">Open to roles</span>
         </div>
-        <div class="monogram">DR</div>
+        <div class="monogram">DCR</div>
         <h2>Data, patterns<br>&amp; practical outcomes.</h2>
         <p>From customer churn and retention ROI to retail demand forecasting—turning numbers into actions teams can trust.</p>
         <div class="card-rule"></div>
@@ -1188,36 +377,12 @@ footer {
         <p class="section-desc">Practical tools I use for data wrangling, querying, visualization, forecasting, and prototyping.</p>
       </div>
       <div class="skills-grid">
-        <article class="skill">
-          <div class="skill-index">01 — ANALYSIS</div>
-          <h3>Programming &amp; Data</h3>
-          <p>Python · Pandas · NumPy · Matplotlib</p>
-        </article>
-        <article class="skill">
-          <div class="skill-index">02 — QUERYING</div>
-          <h3>Databases</h3>
-          <p>SQL · MySQL · PostgreSQL · MongoDB</p>
-        </article>
-        <article class="skill">
-          <div class="skill-index">03 — REPORTING</div>
-          <h3>BI &amp; Visualization</h3>
-          <p>Power BI · Excel · Tableau · Looker Studio</p>
-        </article>
-        <article class="skill">
-          <div class="skill-index">04 — MODELLING</div>
-          <h3>Machine Learning &amp; Forecasting</h3>
-          <p>Scikit-learn · LightGBM · SHAP · Time-Series Forecasting</p>
-        </article>
-        <article class="skill">
-          <div class="skill-index">05 — BUILDING</div>
-          <h3>APIs &amp; Interactive Apps</h3>
-          <p>Flask · FastAPI · Streamlit · REST APIs</p>
-        </article>
-        <article class="skill">
-          <div class="skill-index">06 — WORKFLOW</div>
-          <h3>Developer &amp; Notebook Tools</h3>
-          <p>Git · GitHub · VS Code · Jupyter · Google Colab</p>
-        </article>
+        <article class="skill"><div class="skill-index">01 — ANALYSIS</div><h3>Programming &amp; Data</h3><p>Python · Pandas · NumPy · Matplotlib</p></article>
+        <article class="skill"><div class="skill-index">02 — QUERYING</div><h3>Databases</h3><p>SQL · MySQL · PostgreSQL · MongoDB</p></article>
+        <article class="skill"><div class="skill-index">03 — REPORTING</div><h3>BI &amp; Visualization</h3><p>Power BI · Excel · Tableau · Looker Studio</p></article>
+        <article class="skill"><div class="skill-index">04 — MODELLING</div><h3>Machine Learning &amp; Forecasting</h3><p>Scikit-learn · LightGBM · SHAP · Time-Series Forecasting</p></article>
+        <article class="skill"><div class="skill-index">05 — BUILDING</div><h3>APIs &amp; Interactive Apps</h3><p>Flask · FastAPI · Streamlit · REST APIs</p></article>
+        <article class="skill"><div class="skill-index">06 — WORKFLOW</div><h3>Developer &amp; Notebook Tools</h3><p>Git · GitHub · VS Code · Jupyter · Google Colab</p></article>
       </div>
     </section>
 
@@ -1258,19 +423,39 @@ footer {
           <div>
             <h3>Data Science Intern</h3>
             <div class="org">Nexvia</div>
-            <p>Delivered end-to-end applied data science workflows covering data preparation, predictive modelling, model explainability, forecasting, and interactive decision apps.</p>
+            <p>Worked on two applied data science projects, taking each one end to end: from raw data and feature preparation, through modelling and explainability, to an interactive dashboard that a business team can actually use.</p>
+
+            <h4>DS-01 · Customer Lifetime Value &amp; Churn Intelligence</h4>
             <ul>
-              <li><a href="https://github.com/dinesh15-hub/Nexvia" target="_blank" rel="noreferrer">DS-01 · Customer Lifetime Value &amp; Churn Intelligence ↗</a></li>
-              <li><a href="https://github.com/dinesh15-hub/DS-02-Demand-Forecasting" target="_blank" rel="noreferrer">DS-02 · Demand Forecasting &amp; Inventory Optimization ↗</a></li>
+              <li>Built a customer intelligence system on telecom customer data stored in PostgreSQL, using Python and LightGBM for churn prediction.</li>
+              <li>Used SHAP to explain which factors drive churn for individual customers and across segments.</li>
+              <li>Applied survival analysis (Kaplan–Meier and Cox models) to understand when customers are most likely to leave.</li>
+              <li>Created a retention ROI simulator so teams can weigh the cost of an intervention against the value it saves.</li>
+              <li>Delivered everything as an interactive Streamlit dashboard, deployed live.</li>
+            </ul>
+
+            <h4>DS-02 · Demand Forecasting &amp; Inventory Optimization</h4>
+            <ul>
+              <li>Forecast retail demand on the M5 dataset, comparing Prophet, LightGBM and Temporal Fusion Transformer (TFT) models.</li>
+              <li>Used Darts MinT reconciliation to keep forecasts consistent across product and store hierarchies, and added prediction intervals to show forecast uncertainty.</li>
+              <li>Connected forecasts to inventory decisions with OR-Tools optimization.</li>
+              <li>Presented results in an interactive Plotly Dash dashboard.</li>
             </ul>
           </div>
         </article>
+
         <article class="exp-item">
           <div class="date">Feb 2026 — Jun 2026<span>Internship</span></div>
           <div>
             <h3>AI Intern</h3>
             <div class="org">Ethara AI</div>
-            <p>Evaluated and refined model outputs using structured reasoning rubrics, consistency checks, and quality-focused error analysis.</p>
+            <p>Worked on AI model evaluation, reviewing the quality of model outputs with a careful, structured approach and helping make AI responses more accurate and reliable.</p>
+            <ul>
+              <li>Evaluated AI model responses against defined guidelines for accuracy, reasoning and quality.</li>
+              <li>Applied structured, step-by-step reasoning to check whether answers were correct and well supported.</li>
+              <li>Identified errors, inconsistencies and weak responses, and recorded clear feedback for improving the model.</li>
+              <li>Built a habit of detail-oriented, quality-focused review that carries over directly into data validation and analysis work.</li>
+            </ul>
           </div>
         </article>
       </div>
@@ -1298,17 +483,17 @@ footer {
             <span class="project-no">01 / 04</span>
             <span class="project-type">Job-Market Analytics</span>
           </div>
-          <h3>TalentLens AI</h3>
+          <h3><a href="https://github.com/dinesh15-hub/TalentLens-AI" target="_blank" rel="noreferrer">TalentLens AI</a></h3>
           <p>Analyzes job postings data to uncover hiring demand, compensation trends, and skill co-occurrence across roles.</p>
           <div class="project-metric">
             <div class="metric"><b>123K+</b><span>Job postings analyzed</span></div>
             <div class="metric"><b>Skills &amp; Pay</b><span>Trend &amp; role mapping</span></div>
           </div>
-          <div class="tags">
-            <span>Python</span><span>Pandas</span><span>SQL</span><span>Analytics</span>
-          </div>
+          <div class="tags"><span>Python</span><span>Pandas</span><span>SQL</span><span>Analytics</span></div>
           <div class="project-footer">
-            <a class="project-link" href="https://github.com/dinesh15-hub" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+            <div class="plinks">
+              <a class="project-link" href="https://github.com/dinesh15-hub/TalentLens-AI" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+            </div>
             <button class="detail-btn" type="button" data-project="talentlens">Quick brief</button>
           </div>
         </article>
@@ -1318,17 +503,18 @@ footer {
             <span class="project-no">02 / 04</span>
             <span class="project-type">Customer Analytics · DS-01</span>
           </div>
-          <h3>Customer Lifetime Value &amp; Churn Intelligence</h3>
+          <h3><a href="https://ds-01-customer-intelligence-project.streamlit.app/" target="_blank" rel="noreferrer">Customer Lifetime Value &amp; Churn Intelligence</a></h3>
           <p>Combines churn prediction, customer segmentation, SHAP feature attribution, survival analysis, and a retention ROI simulator.</p>
           <div class="project-metric">
             <div class="metric"><b>SHAP</b><span>Driver explainability</span></div>
             <div class="metric"><b>ROI Sim</b><span>Retention trade-offs</span></div>
           </div>
-          <div class="tags">
-            <span>LightGBM</span><span>SHAP</span><span>Survival Analysis</span><span>Streamlit</span>
-          </div>
+          <div class="tags"><span>LightGBM</span><span>SHAP</span><span>Survival Analysis</span><span>Streamlit</span></div>
           <div class="project-footer">
-            <a class="project-link" href="https://github.com/dinesh15-hub/Nexvia" target="_blank" rel="noreferrer">Explore DS-01 ↗</a>
+            <div class="plinks">
+              <a class="project-link live" href="https://ds-01-customer-intelligence-project.streamlit.app/" target="_blank" rel="noreferrer">Live App ↗</a>
+              <a class="project-link" href="https://github.com/dinesh15-hub/DS-01-Customer-Intelligence" target="_blank" rel="noreferrer">GitHub ↗</a>
+            </div>
             <button class="detail-btn" type="button" data-project="churn">Quick brief</button>
           </div>
         </article>
@@ -1338,17 +524,17 @@ footer {
             <span class="project-no">03 / 04</span>
             <span class="project-type">Demand Planning · DS-02</span>
           </div>
-          <h3>Demand Forecasting &amp; Inventory Optimization</h3>
+          <h3><a href="https://github.com/dinesh15-hub/DS-02-Demand-Forecasting" target="_blank" rel="noreferrer">Demand Forecasting &amp; Inventory Optimization</a></h3>
           <p>Forecasts retail demand on the M5 benchmark and pairs predictions with inventory optimization to guide reorder decisions.</p>
           <div class="project-metric">
             <div class="metric"><b>M5 Dataset</b><span>Multi-series retail</span></div>
             <div class="metric"><b>LGBM + TFT</b><span>Forecasting &amp; stock</span></div>
           </div>
-          <div class="tags">
-            <span>LightGBM</span><span>TFT</span><span>OR-Tools</span><span>Python</span>
-          </div>
+          <div class="tags"><span>LightGBM</span><span>TFT</span><span>OR-Tools</span><span>Python</span></div>
           <div class="project-footer">
-            <a class="project-link" href="https://github.com/dinesh15-hub/DS-02-Demand-Forecasting" target="_blank" rel="noreferrer">Explore DS-02 ↗</a>
+            <div class="plinks">
+              <a class="project-link" href="https://github.com/dinesh15-hub/DS-02-Demand-Forecasting" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+            </div>
             <button class="detail-btn" type="button" data-project="forecasting">Quick brief</button>
           </div>
         </article>
@@ -1358,42 +544,27 @@ footer {
             <span class="project-no">04 / 04</span>
             <span class="project-type">Capstone · Applied AI</span>
           </div>
-          <h3>Graph-Aware LLMs for Combinatorial Optimization</h3>
+          <h3><a href="https://github.com/dinesh15-hub/Graph-Aware-LLM" target="_blank" rel="noreferrer">Graph-Aware LLMs for Combinatorial Optimization</a></h3>
           <p>Investigates how graph representations help large language models reason through structural constraints in combinatorial optimization tasks.</p>
           <div class="project-metric">
             <div class="metric"><b>Graph + LLM</b><span>Structured context</span></div>
             <div class="metric"><b>NP-Hard</b><span>Heuristic exploration</span></div>
           </div>
-          <div class="tags">
-            <span>LLMs</span><span>Graph Reasoning</span><span>Optimization</span><span>Python</span>
-          </div>
+          <div class="tags"><span>LLMs</span><span>Graph Reasoning</span><span>Optimization</span><span>Python</span></div>
           <div class="project-footer">
-            <a class="project-link" href="https://github.com/dinesh15-hub" target="_blank" rel="noreferrer">Find on GitHub ↗</a>
+            <div class="plinks">
+              <a class="project-link" href="https://github.com/dinesh15-hub/Graph-Aware-LLM" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+            </div>
             <button class="detail-btn" type="button" data-project="graphllm">Quick brief</button>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="section" id="certifications">
-      <div class="section-head">
-        <div>
-          <div class="section-kicker">06 / Beyond the Degree</div>
-          <h2 class="section-title">Certifications &amp; highlights.</h2>
-        </div>
-        <p class="section-desc">Skill benchmarks and competitive problem-solving outside regular coursework.</p>
-      </div>
-      <div class="cert-grid">
-        <div class="cert">HackerRank SQL (Basic)<small>Verified SQL querying skill</small></div>
-        <div class="cert">HackerRank SQL (Intermediate)<small>Joins, aggregations &amp; query logic</small></div>
-        <div class="cert">University-Level Hackathons<small>Team ideation &amp; rapid prototyping</small></div>
-      </div>
-    </section>
-
     <section class="section" id="contact">
       <div class="contact-panel">
         <div>
-          <div class="section-kicker" style="color: var(--lime)">07 / Contact</div>
+          <div class="section-kicker" style="color: var(--lime)">06 / Contact</div>
           <h2>Have a data problem?<br>Let's talk.</h2>
           <p>Open to Data Analyst, Business Analyst, and junior analytics roles. Reach out directly by email or connect on LinkedIn and GitHub.</p>
         </div>
@@ -1434,6 +605,7 @@ footer {
     </div>
     <div class="modal-actions">
       <button class="btn secondary" type="button" id="closeModalSecondary">Close</button>
+      <a class="btn secondary" id="modalLiveLink" href="#" target="_blank" rel="noreferrer" style="display:none">Live App ↗</a>
       <a class="btn primary" id="modalRepoLink" href="https://github.com/dinesh15-hub" target="_blank" rel="noreferrer">Open Repository ↗</a>
     </div>
   </div>
@@ -1445,11 +617,10 @@ footer {
 (() => {
   const EMAIL = "dineshchandrareddy75@gmail.com";
 
-  // Dynamic copyright year
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  // Mobile menu toggle
+  // Mobile menu
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
   if (menuToggle && navLinks) {
@@ -1458,7 +629,6 @@ footer {
       menuToggle.setAttribute("aria-expanded", String(!expanded));
       navLinks.classList.toggle("open", !expanded);
     });
-
     navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
         menuToggle.setAttribute("aria-expanded", "false");
@@ -1467,7 +637,7 @@ footer {
     });
   }
 
-  // Copy email helper + toast
+  // Copy email + toast
   const toast = document.getElementById("toast");
   let toastTimer = null;
   function showToast(message) {
@@ -1477,28 +647,24 @@ footer {
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => toast.classList.remove("show"), 2400);
   }
-
   async function copyEmail() {
     try {
       await navigator.clipboard.writeText(EMAIL);
-      showToast("Copied dineshchandrareddy75@gmail.com");
+      showToast("Copied " + EMAIL);
     } catch {
       showToast("Email: " + EMAIL);
     }
   }
-
   document.getElementById("copyEmailHero")?.addEventListener("click", copyEmail);
   document.getElementById("copyEmailContact")?.addEventListener("click", copyEmail);
 
-  // Project filter buttons
+  // Project filter
   const filterButtons = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll("#projectGrid .project");
-
   filterButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       const filter = btn.dataset.filter;
       filterButtons.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
-
       projectCards.forEach((card) => {
         const match = filter === "all" || card.dataset.category === filter;
         card.classList.toggle("is-hidden", !match);
@@ -1506,7 +672,7 @@ footer {
     });
   });
 
-  // Project quick-brief modal
+  // Quick-brief modal
   const PROJECT_BRIEFS = {
     talentlens: {
       kicker: "01 / Job-Market Analytics",
@@ -1517,7 +683,7 @@ footer {
         "Queried trend aggregations to surface high-demand skills and role expectations.",
         "Structured insights for quick comparison across roles and market segments."
       ],
-      url: "https://github.com/dinesh15-hub"
+      url: "https://github.com/dinesh15-hub/TalentLens-AI"
     },
     churn: {
       kicker: "02 / Customer Analytics · DS-01",
@@ -1528,14 +694,15 @@ footer {
         "Used SHAP explanations and survival analysis to clarify why and when churn happens.",
         "Built a retention ROI simulator in Streamlit to weigh intervention cost against saved value."
       ],
-      url: "https://github.com/dinesh15-hub/Nexvia"
+      url: "https://github.com/dinesh15-hub/DS-01-Customer-Intelligence",
+      live: "https://ds-01-customer-intelligence-project.streamlit.app/"
     },
     forecasting: {
       kicker: "03 / Demand Planning · DS-02",
       title: "Demand Forecasting & Inventory Optimization",
       summary: "Pairs multi-horizon retail demand forecasting on the M5 dataset with optimization logic to support stocking and replenishment decisions.",
       bullets: [
-        "Engineered time-series features and compared LightGBM and Temporal Fusion Transformer (TFT) forecasts.",
+        "Compared Prophet, LightGBM and Temporal Fusion Transformer (TFT) forecasts, with MinT reconciliation and prediction intervals.",
         "Connected demand forecasts to inventory optimization workflows with OR-Tools.",
         "Focused on balancing stockout risk against excess holding costs."
       ],
@@ -1550,7 +717,7 @@ footer {
         "Evaluated reasoning behavior on challenging combinatorial optimization tasks.",
         "Documented findings, trade-offs, and experimental setups systematically."
       ],
-      url: "https://github.com/dinesh15-hub"
+      url: "https://github.com/dinesh15-hub/Graph-Aware-LLM"
     }
   };
 
@@ -1560,6 +727,7 @@ footer {
   const modalSummary = document.getElementById("modalSummary");
   const modalBullets = document.getElementById("modalBullets");
   const modalRepoLink = document.getElementById("modalRepoLink");
+  const modalLiveLink = document.getElementById("modalLiveLink");
   let lastTrigger = null;
 
   function openModal(key, trigger) {
@@ -1570,6 +738,12 @@ footer {
     modalTitle.textContent = data.title;
     modalSummary.textContent = data.summary;
     modalRepoLink.href = data.url;
+    if (data.live) {
+      modalLiveLink.href = data.live;
+      modalLiveLink.style.display = "inline-flex";
+    } else {
+      modalLiveLink.style.display = "none";
+    }
     modalBullets.innerHTML = data.bullets.map((item) => `<li>${item}</li>`).join("");
     modal.classList.add("open");
     document.getElementById("closeModal")?.focus();
@@ -1584,18 +758,11 @@ footer {
   document.querySelectorAll(".detail-btn").forEach((btn) => {
     btn.addEventListener("click", () => openModal(btn.dataset.project, btn));
   });
-
   document.getElementById("closeModal")?.addEventListener("click", closeModal);
   document.getElementById("closeModalSecondary")?.addEventListener("click", closeModal);
-
-  modal?.addEventListener("click", (e) => {
-    if (e.target === modal) closeModal();
-  });
-
+  modal?.addEventListener("click", (e) => { if (e.target === modal) closeModal(); });
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal?.classList.contains("open")) {
-      closeModal();
-    }
+    if (e.key === "Escape" && modal?.classList.contains("open")) closeModal();
   });
 })();
 </script>
